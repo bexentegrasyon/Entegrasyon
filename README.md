@@ -35,3 +35,5 @@ tamamını alır. Bu arada banka müşteriyi kendisinde kayıtlı cep telefonuna
 (tek kullanımlık şifre) göndererek doğrular. Doğrulamayı başarıyla geçen kart sahibine ait
 bilgiler sanal POS’a aktırılır ve işlem sonucu alınır. İşlem sonucu BKM tarafından işyeri ile
 paylaşılır.
+
+
