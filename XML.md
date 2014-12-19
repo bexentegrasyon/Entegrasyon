@@ -1,5 +1,5 @@
 #EK C - XML İle Paket Kullanılmadan Entegrasyon
-&nbp; Entegrasyon Başlangıcı<br>
+<p> Entegrasyon Başlangıcı</p><br>
 Entegrasyona başlamanız için ilk olarak işyeri kaydınızın yapılması ve mid değerinin size
 ulaşmış olması gerekmektedir.
 Aynı zamanda 1024 veya 2048 boyutunda bir public key yaratıp bunu BKM’ye iletmeniz
