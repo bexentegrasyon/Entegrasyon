@@ -12,4 +12,6 @@ komutlarını kullanabilirsiniz.
 Webservis Tanımları
 initializePayment Servisi için hazırlanan webservis tanımları aşağıda yer almaktadır.
 
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5504570/b60ccdc8-878e-11e4-820a-97f7a126205f.PNG)
+
 
