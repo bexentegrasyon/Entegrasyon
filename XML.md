@@ -81,4 +81,5 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 &lt;/soapenv:Body&gt;<br>
 &lt;/soapenv:Envelope&gt;<br>
 
+Şekil 6 Örnek İstek
 
