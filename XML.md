@@ -256,4 +256,11 @@ sb.append(t).append(posUrl)<br>
   &nbsp;    .append(md).append(xid)<br>
   &nbsp;   .append(s3DFDec).append(cIp)<br>
   &nbsp;    .append(extra).append(ts);‬<br>
+  
 return sb.toString();‬<br>
+
+<b>requestMerchInfo Dönüş Kodları:</b> <br>
+
+Yalnızca requestMerchInfo adımında, sistemden dönebilecek kod listesidir. Servisin tüm
+dönüş kodları listesi EK D’ de yer almaktadır.
+
