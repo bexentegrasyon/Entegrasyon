@@ -355,3 +355,13 @@ xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
 106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
 8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}<br>
 <b>-Şekil 11 POS mesajının JSON formatına çevrilmiş hali-</b>
+
+
+###İşyerine İptal için Yönlendirme<br>
+
+Express sisteminin, ödeme akışının tamamlanamadığı durumlarda herhangi bir adımda
+işyerine yaptığı geri yönlendirmedir. “initializePayment İstek Parametreleri” içinde alınan cUrl
+adresine, “initializePayment Dönüş Parametreleri”inde yer alan token ile “Güvenlik”
+bölümünde belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
+
+Aşağıdaki bilgiler redirect edilecek URL’e GET parametresi olarak eklenecektir.
