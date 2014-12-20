@@ -175,7 +175,18 @@ indirme linkine yönlendirir.<br>
 Ödeme yapacağı kartı ve ödeme şeklini (taksit, peşin, taksit atlatmalı vb.) belirleyen
 kullanıcının ödemesini gerçekleştirebilmesi için işyeri tarafından iletilecek POS ve MPI
 verilerinin express sistemi tarafından işyerinden istendiği adımdır.
+
 İşyeri, bu adımda bir web servis ile BKM’den gelen isteği karşılayıp cevap dönecektir.
 İşyerinin, hazırladığı web servisinin kullanılabilirliğini test etmesi gerekmektedir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516172/9346e400-8896-11e4-8445-112f176946bb.jpg)
+
+###Confirmation URL
+
+BKM Express sisteminde, sanal pos işlemlerinde başarılı sonucun işyerine ulaşmaması
+ve kullanıcının işyerine son aşamada dönüşündeki sorunları en aza indirgemek amacıyla
+confirmation URL yapısı kullanılmaktadır.
+
+İşyeri, BKM’ye, işlem sonucunun success URL öncesi teyid amaçlı işyerine dönülmesi
+için bir URL bilgisi vermelidir. BKM, bu URL e, success URL e dönüş yapmadan önce aynı
+parametrelerle post yapmaktadır.
