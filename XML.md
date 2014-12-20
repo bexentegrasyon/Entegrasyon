@@ -293,3 +293,32 @@ onaylandığını görmelidir.
  &nbsp;   &nbsp; 2- Aynı şekilde işyeri email ile bildirim de yapıyorsa, kullanıcı email ile siparişin başarılı
 gerçekleştiğini görebiliyor olmalıdır.
 
+
+###İşyerine Başarılı İşlem Sonucu Yönlendirme
+
+Express ödeme akışının başarıyla tamamlandığı durumlarda express sisteminin işyerine
+yaptığı geri yönlendirmedir. “initializePayment İstek Parametreleri” içinde alınan sUrl’e
+aşağıdaki bilgiler http formu içerisinde hidden alan olarak post edilecektir.
+
+Eğer işlem mobil uygulamadan geliyor ise mobil uygulamanın successURL’ine sadece token
+iletilecek uygulama da bu token ile kendi serverına daha önceden iletilmiş (İşyerinin
+confirmationURL adresine bir önceki adımda yapılan bildirimdir) olan işlem sonucunu
+sorabilecektir. Eğer işlem web üzerinden yapılıyorsa, confirmationURL adresine de bildirilmiş
+olan standart tüm alanlar, redirect ile de işyerine tekrar bildirilmektedir.
+
+Bilgiler “Güvenlik” bölümünde ve aşağıda belirtilen imzalama yöntemi dikkate alınarak
+imzalanacaktır. Ödeme akışının herhangi bir nedenle başarısız olması sonucunda kullanıcı,
+“İşyerine İptal için Yönlendirme” yöntemi ile işyeri’ne yönlendirilir.
+
+Önemli Not: confirmationURL adresine BKM Express tarafından yapılan bildirim başarılı ve
+imza kontrolünden geçmiş ise , redirect ile yapılan bildirimde imzanın tutmaması, sipariş iptali
+için yeterli neden değildir. Ancak bu tip bir redirect’te işyeri sayfasında hata gösterilmesi
+önerilir.
+
+Express ödeme akışının başarıyla tamamlandığı durumlarda express sisteminin işyerine
+yaptığı geri yönlendirmedir. “initializePayment İstek Parametreleri” içinde alınan sUrl’e
+aşağıdaki bilgiler http formu içerisinde hidden alan olarak post edilecektir. Bilgiler “Güvenlik”
+bölümünde ve aşağıda belirtilen imzalama yöntemi dikkate alınarak imzalanacaktır. Ödeme
+akışının herhangi bir nedenle başarısız olması sonucunda kullanıcı, “İşyerine İptal için
+Yönlendirme” yöntemi ile işyeri’ne yönlendirilir.
+
