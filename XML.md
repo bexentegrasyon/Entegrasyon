@@ -80,5 +80,3 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
     </bkm:initializePayment>
   </soapenv:Body>
 </soapenv:Envelope>
-
-
