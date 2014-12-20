@@ -139,6 +139,26 @@ belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
 Mobil uygulamalar tarayıcıları POST metoduyla açamamaktadır. Bu sebeple yukarıda anlatılan
 yönlendirme gerçekleştirilememektedir. Bunun yerine üye işyerinin mobil uygulaması, işyeri
 sunucusundan aldığı token değerini BKM Mobil uygulamasının önceden kendilerine iletilmiş
-olan URL’i ile birleştirerek açmalıdır.
-<b>1.<b/> Kullanıcı mobil işyeri uygulamasından ödeme yapma seçeneğine gelir.
+olan URL’i ile birleştirerek açmalıdır.<br>
+1.Kullanıcı mobil işyeri uygulamasından ödeme yapma seçeneğine gelir.<br>
+2. Bu noktada BKM Express ile ödeme seçeneğini seçer.<br>
+3. İşyeri mobil uygulaması, kendi sunucusuna istekte bulunur ve ödemenin BKM Express ile
+yapılacağını belirtir.<br>
+4. İşyeri sunucusu, aldığı istek doğrultusunda BKM Express’e işlem başlatma isteği
+gönderir.(InitPayment) Bu istekte, optional alanlar doldurulur.<br>
+5. BKM Express işlem isteğini işler, optional alanları yorumlayarak, işlemi kendi
+veritabanında mobil işlem olarak işaretler.<br>
+6. Cevabı alan sunucu, kendi uygulamasına işlemin tokenını iletir.<br>
+7. Üye işyeri uygulaması , aldığı token ile birlikte kendisine önceden iletilmiş olan BKM
+Mobil uygulaması URL’ini (bkmurl://payment.token?XXX
+) birleştirerek uygulamanın açılıp açılamayacağını kontrol eder. Uygulamayı açabiliyorsa açar (bu durumda 8. Ve 9.
+adımlara gelinmez, işlem bitiminde mobil success veya cancel url’e dönülür), açamıyorsa
+Safari tarayıcısında BKM Express sunucusunun yönlendirmeyi yapacak olan sayfasını açar.
+Bu sayfaya tokenı gönderir.<br>
+8. BKM Express sayfası token ile birlikte işlem bilgilerine erişir ve gerekli yönlendirmeyi
+yapar.<br>
+9. BKM Express gelen tokendan işlem tipine bakar. Mobil uygulamadan veya Mobil
+tarayıcıdan gelmiş ise, BKM Mobil uygulamasını açmaya çalışır, açamazsa uygulama
+indirme linkine yönlendirir.<br>
+
 
