@@ -127,4 +127,4 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 &lt;/ns2:initializePaymentResponse&gt;<br>
 &lt;/S:Body&gt;<br>
 &lt;/S:Envelope&gt;<br>
-
+<b>-Şekil 7 Örnek Dönüş-</b>
