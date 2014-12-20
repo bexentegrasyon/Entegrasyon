@@ -110,24 +110,21 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516081/e16dca22-8891-11e4-9025-c8351cf28faa.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516103/eac877c4-8892-11e4-9332-31b54ec00dbd.jpg)
 
-<table cellspacing="0" cellpadding="0">
-  <tr>
-    <td valign="top" align="left"><p>&lt;S:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt; </p>
-        <p>&lt;S:Body&gt; </p>
-        <p>&lt;ns2:initializePaymentResponse xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt; </p>
-        <p>&lt;InitializePaymentWSResponse&gt; </p>
-        <p>&lt;t&gt;186005784745383&lt;/t&gt; </p>
-        <p>&lt;url&gt;http://bkmexpress/islemBasarili.bkm&lt;/url&gt; </p>
-        <p>&lt;ts&gt;20110729-15:05:23&lt;/ts&gt; </p>
-        <p>&lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt; </p>
-        <p>&lt;res&gt; </p>
-        <p>&lt;resCode&gt;0&lt;/resCode&gt; </p>
-        <p>&lt;resMsg&gt;Success&lt;/resMsg&gt; </p>
-        <p>&lt;resDet/&gt; </p>
-        <p>&lt;/res&gt; </p>
-        <p>&lt;/InitializePaymentWSResponse&gt; </p>
-        <p>&lt;/ns2:initializePaymentResponse&gt; </p>
-        <p>&lt;/S:Body&gt; </p>
-        <p>&lt;/S:Envelope&gt; </p></td>
-  </tr>
-</table>
+        &lt;S:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt; 
+        &lt;S:Body&gt;
+        &lt;ns2:initializePaymentResponse xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt;
+        &lt;InitializePaymentWSResponse&gt; 
+        &lt;t&gt;186005784745383&lt;/t&gt; 
+        &lt;url&gt;http://bkmexpress/islemBasarili.bkm&lt;/url&gt; 
+        &lt;ts&gt;20110729-15:05:23&lt;/ts&gt; 
+        &lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt; 
+        &lt;res&gt; 
+        &lt;resCode&gt;0&lt;/resCode&gt; 
+        &lt;resMsg&gt;Success&lt;/resMsg&gt; 
+        &lt;resDet/&gt; 
+        &lt;/res&gt; 
+        &lt;/InitializePaymentWSResponse&gt; 
+        &lt;/ns2:initializePaymentResponse&gt; 
+        &lt;/S:Body&gt; 
+        &lt;/S:Envelope&gt; 
+  
