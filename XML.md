@@ -515,6 +515,7 @@ oluşturacağınız stringi oluşturmanız gerekiyor. Detay için, ilgili web
 servislerin açıklamalarındaki Java örneğine bakabilirsiniz.<br>
 
 - Null alanlar imzaya boş string olarak eklenmiş.<br>
+
 &nbsp; &nbsp; &nbsp; o Null olan alanlarınızı “null” olarak imzalarınıza eklediğinizden emin olun.
 Boolean değerleri imzanıza ve mesajınıza aynı şekilde eklediğinizden emin olun.<br>
 
