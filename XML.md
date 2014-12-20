@@ -507,19 +507,30 @@ ilgili yardım istemeniz gerekmektedir.
 
 İmzalama konusunda bir kaç temel problem yaşanabiliyor :<br>
 
-- İmza, istendiği şekilde alanların sırayla eklenmesi ile oluşturulmamış.
+- İmza, istendiği şekilde alanların sırayla eklenmesi ile oluşturulmamış.<br>
 
-&nbsp;   &nbsp; o Bu durum özellikle initialize payment metodunda yaşanıyor. Gönderdiğiniz
+&nbsp;   &nbsp;  &nbsp;o Bu durum özellikle initialize payment metodunda yaşanıyor. Gönderdiğiniz
 her banka ve her taksit seçeneği için birer inner loop yaparak imza
 oluşturacağınız stringi oluşturmanız gerekiyor. Detay için, ilgili web
-servislerin açıklamalarındaki Java örneğine bakabilirsiniz.
+servislerin açıklamalarındaki Java örneğine bakabilirsiniz.<br>
 
-- Null alanlar imzaya boş string olarak eklenmiş.
+- Null alanlar imzaya boş string olarak eklenmiş.<br>
 &nbsp;   &nbsp; o Null olan alanlarınızı “null” olarak imzalarınıza eklediğinizden emin olun.
-Boolean değerleri imzanıza ve mesajınıza aynı şekilde eklediğinizden emin olun.
+Boolean değerleri imzanıza ve mesajınıza aynı şekilde eklediğinizden emin olun.<br>
 
 &nbsp;   &nbsp; o Mesajda “true” gelip imzanızda “1” yazdığınızda, imzalar uyuşmayacağından
 “MAC verification fail” hatası alacaksınız.
+
+<b>RequestMerchInfo web servisini hazırlayamıyorum</b>
+
+Bu web servisi, işyerlerine gönderilen “requestMerchInfoService.wsdl” ile uyumlu
+olarak yazmanız gerekiyor. Aksi takdirde BKM, sizin web servisinize geldiğinde büyük
+ihtimalle namespace e dayalı bir hata oluşacaktır.
+
+Bu servisleri wsdl e uygun halde hazırlamak için, Java ve .NET ortamlarında web servis
+kabukları üreten araçlar mevcut, aynı zamanda BKM’nin sunduğu PHP paketinde de örnek bir
+web servis bulunuyor.
+
 
 
 
