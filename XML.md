@@ -448,3 +448,37 @@ olduğunu
 - Web.config ‘in bulunduğu dosyaya okuma hakkınızın olduğunu
 kontrol etmelisiniz.
 
+
+<b>Preprod ve Production için endpoint adresleri nelerdir?</b>
+
+- Preprod için :
+https://preprod.bkmexpress.com.tr:9620/BKMExpress/BkmExpressPaymentService.ws
+- Prod için :
+https://www.bkmexpress.com.tr:9620/BKMExpress/BkmExpressPaymentService.ws
+
+<b>Public key uzunluğu ne olmalıdır?</b>
+
+Public key uzunluğunuz 1024 yada 2048 olmalıdır.
+
+<b>Doğrulama kodu cep telefonuma gelmiyor. Ne yapmalıyım?</b>
+
+PreProd ortamı için doğrulama kodu alanına, “123456” girebilirsiniz.
+
+<b>3D Secure üyesi değilim. Webserviste MPI bilgilerini ne göndermeliyim.</b>
+
+3D Secure desteklemiyor iseniz, webservis çağrısında bu alanları bize boş göndermelisiniz.
+
+<b>Web servis çağrısı yapıyorum fakat “Unknown Error” hatası ile karşılaşıyorum.</b>
+
+Burada kontrol etmeniz gereken bir kaç nokta mevcut :
+
+- Merchant olarak kaydınızı BKM’ye yaptırdınız mı? Bu kaydın sonunda size bir
+- “Merchant Id” tanımlanmış olmalı, yaptığınız istekte bu alanı kullanıyor musunuz?
+- Dökümanın başında yazılı talimatlardan olan private-public key çiftinizi ürettiniz mi?
+&nbsp;   &nbsp; o Ürettiyseniz public keyinizi BKM ile paylaştınız mı?
+&nbsp;   &nbsp; o Public keyinizi paylaştıysanız, BKM’nin keyinizi kaydettiğini doğrular mısınız?
+- Yukarıdaki iki seçenekte de sorun yoksa bu sefer BKM’den, sizin için hata loglarını
+incelemelerini istemelisiniz.
+
+
+
