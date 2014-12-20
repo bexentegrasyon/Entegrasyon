@@ -190,3 +190,21 @@ confirmation URL yapısı kullanılmaktadır.
 İşyeri, BKM’ye, işlem sonucunun success URL öncesi teyid amaçlı işyerine dönülmesi
 için bir URL bilgisi vermelidir. BKM, bu URL e, success URL e dönüş yapmadan önce aynı
 parametrelerle post yapmaktadır.
+
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt;<br>
+&lt;soapenv:Header/&gt;<br>
+&lt;soapenv:Body&gt;<br>
+&lt;bkm:requestMerchInfo&gt;<br>
+&lt;requestMerchInfoWSRequest&gt;<br>
+&lt;t&gt;186005784745383&lt;/t&gt;<br>
+&lt;bid&gt;123&lt;/bid&gt;<br>
+&lt;bName&gt;BankaIsmi&lt;/bName&gt;<br>
+&lt;cBin&gt;458652&lt;/cBin&gt;<br>
+&lt;nofInst&gt;2&lt;/nofInst&gt;<br>
+&lt;ts&gt;20110729-15:05:23&lt;/ts&gt;<br>
+&lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt;<br>
+&lt;/requestMerchInfoWSRequest&gt;<br>
+&lt;/bkm:requestMerchInfo&gt;<br>
+&lt;/soapenv:Body&gt;<br>
+&lt;/soapenv:Envelope&gt;<br>
+
