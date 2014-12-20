@@ -128,3 +128,8 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 &lt;/S:Body&gt;<br>
 &lt;/S:Envelope&gt;<br>
 <b>-Şekil 7 Örnek Dönüş-</b>
+
+Bu adım sonrasında kullanıcı Express sistemine yönlendirilir (redirect yapılmalıdır, <b>iFrame desteklenmemektedir</b>)
+“initializePayment Dönüş parametreleri” içinde alınan URL’e, token ile “Güvenlik” bölümünde
+belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
+
