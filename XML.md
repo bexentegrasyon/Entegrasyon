@@ -170,4 +170,11 @@ yapar.<br>
 tarayıcıdan gelmiş ise, BKM Mobil uygulamasını açmaya çalışır, açamazsa uygulama
 indirme linkine yönlendirir.<br>
 
+##requestMerchInfo
+
+Ödeme yapacağı kartı ve ödeme şeklini (taksit, peşin, taksit atlatmalı vb.) belirleyen
+kullanıcının ödemesini gerçekleştirebilmesi için işyeri tarafından iletilecek POS ve MPI
+verilerinin express sistemi tarafından işyerinden istendiği adımdır.
+İşyeri, bu adımda bir web servis ile BKM’den gelen isteği karşılayıp cevap dönecektir.
+İşyerinin, hazırladığı web servisinin kullanılabilirliğini test etmesi gerekmektedir.
 
