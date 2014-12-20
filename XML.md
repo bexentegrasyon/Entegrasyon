@@ -245,7 +245,7 @@ parametrelerle post yapmaktadır.
 &lt;/S:Envelope&gt;<br>
 <b>-Şekil 9 Örnek Dönüş-</b>
 
-<b>İmza oluşturmak için alanların birleştirilmesi örneği(Java Kodu)</b><br>
+###İmza oluşturmak için alanların birleştirilmesi örneği(Java Kodu)<br>
 
 StringBuffer sb = new StringBuffer();‬<br>
 
@@ -259,7 +259,7 @@ sb.append(t).append(posUrl)<br>
   
 return sb.toString();‬<br>
 
-<b>requestMerchInfo Dönüş Kodları:</b> <br>
+###requestMerchInfo Dönüş Kodları: <br>
 
 Yalnızca requestMerchInfo adımında, sistemden dönebilecek kod listesidir. Servisin tüm
 dönüş kodları listesi EK D’ de yer almaktadır.
