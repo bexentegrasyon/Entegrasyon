@@ -213,3 +213,34 @@ parametrelerle post yapmaktadır.
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516196/26f5655e-8898-11e4-8a2d-3c5e6a242df7.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516201/651a85b2-8898-11e4-80d1-c028c649bb84.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516204/a7b45588-8898-11e4-8e50-a9c58816682a.jpg)
+
+
+&lt;S:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;<br>
+&lt;S:Body&gt;<br>
+&lt;ns2:requestMerchInfoResponse xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt;<br>
+&lt;RequestMerchInfoWSResponse&gt;<br>
+&lt;t&gt;186005784745383&lt;/t&gt;<br>
+&lt;posUrl&gt;https://posUrl.jsp&lt;/posUrl&gt;<br>
+&lt;posUid&gt;posUsername&lt;/posUid&gt;<br>
+&lt;posPwd&gt;posPassword&lt;/posPwd&gt;<br>
+&lt;s3DAuth&gt;0&lt;/s3DAuth&gt;<br>
+&lt;mpiUrl&gt;https://mpiUrl.jsp&lt;/mpiUrl&gt;<br>
+&lt;mpiUid&gt;mpiUsername&lt;/mpiUid&gt;<br>
+&lt;mpiPwd&gt;mpiPassword&lt;/mpiUid&gt;<br>
+&lt;md&gt;23456&lt;/md&gt;<br>
+&lt;xid&gt;NjQ5MThjYmQ2MTFmNWE1MGRiNDg=&lt;/xid&gt;<br>
+&lt;s3DFDec&gt;0&lt;/s3DFDec&gt;<br>
+&lt;cIp&gt;88.247.126.211&lt;/cIp&gt;<br>
+&lt;extra&gt;{&quot;posno&quot;:&quot;P000007&quot;,&quot;xcip&quot;:&quot;EDF2556SA&quot;}&lt;/extra&gt;<br>
+&lt;ts&gt;20110729-15:05:23&lt;/ts&gt;<br>
+&lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt;<br>
+&lt;res&gt;<br>
+&lt;resCode&gt;0&lt;/resCode&gt;<br>
+&lt;resMsg&gt;Success&lt;/resMsg&gt;<br>
+&lt;resDet/&gt;<br>
+&lt;/res&gt;<br>
+&lt;/RequestMerchInfoWSResponse&gt;<br>
+&lt;/ns2:requestMerchInfoResponse&gt;<br>
+&lt;/S:Body&gt;<br>
+&lt;/S:Envelope&gt;
+<b>-Şekil 9 Örnek Dönüş-</b>
