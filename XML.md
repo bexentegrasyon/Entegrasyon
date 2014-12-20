@@ -509,7 +509,7 @@ ilgili yardım istemeniz gerekmektedir.
 
 - İmza, istendiği şekilde alanların sırayla eklenmesi ile oluşturulmamış.<br>
 
-&nbsp;   &nbsp;  &nbsp;o Bu durum özellikle initialize payment metodunda yaşanıyor. Gönderdiğiniz
+&nbsp;   &nbsp; &nbsp;  o Bu durum özellikle initialize payment metodunda yaşanıyor. Gönderdiğiniz
 her banka ve her taksit seçeneği için birer inner loop yaparak imza
 oluşturacağınız stringi oluşturmanız gerekiyor. Detay için, ilgili web
 servislerin açıklamalarındaki Java örneğine bakabilirsiniz.<br>
@@ -518,7 +518,7 @@ servislerin açıklamalarındaki Java örneğine bakabilirsiniz.<br>
 &nbsp;   &nbsp; &nbsp;  o Null olan alanlarınızı “null” olarak imzalarınıza eklediğinizden emin olun.
 Boolean değerleri imzanıza ve mesajınıza aynı şekilde eklediğinizden emin olun.<br>
 
-&nbsp;   &nbsp; &nbsp; o Mesajda “true” gelip imzanızda “1” yazdığınızda, imzalar uyuşmayacağından
+&nbsp;   &nbsp; &nbsp;  o Mesajda “true” gelip imzanızda “1” yazdığınızda, imzalar uyuşmayacağından
 “MAC verification fail” hatası alacaksınız.
 
 <b>RequestMerchInfo web servisini hazırlayamıyorum</b>
