@@ -322,3 +322,4 @@ bölümünde ve aşağıda belirtilen imzalama yöntemi dikkate alınarak imzala
 akışının herhangi bir nedenle başarısız olması sonucunda kullanıcı, “İşyerine İptal için
 Yönlendirme” yöntemi ile işyeri’ne yönlendirilir.
 
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516264/8cf5caf8-889b-11e4-811f-497f3706b03d.jpg)
