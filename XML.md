@@ -85,6 +85,7 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 <b>-Şekil 6 Örnek İstek-<b/>
 </td>
 </tr></table>
+
 ##&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)
 <p>
   StringBuffer sb = new StringBuffer();&#8236;<br>
