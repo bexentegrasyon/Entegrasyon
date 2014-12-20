@@ -348,3 +348,10 @@ xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
 &lt;TrnxType&gt;Sale&lt;/TrnxType&gt;<br>
 &lt;CustomData /&gt;<br>
 &lt;/PosResponse<br>
+<b>-Şekil 10 Gerçek POS mesajı-</b>
+
+
+{"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
+106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
+8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}
+<b>-Şekil 11 POS mesajının JSON formatına çevrilmiş hali-</b>
