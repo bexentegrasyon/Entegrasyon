@@ -30,7 +30,7 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515955/4693d3f2-888c-11e4-981c-d33782b643cc.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515943/043f1dae-888c-11e4-9c82-e84f5d8bb9a3.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515976/11385394-888d-11e4-8afb-086022472692.jpg)
-
+<table cellspacing="0" cellpadding="0">
 &lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:bkm=&quot;http://www.bkmexpress.com.tr&quot;&gt;<br>
 &lt;soapenv:Header/&gt;<br>
 &lt;soapenv:Body&gt;<br>
@@ -81,7 +81,7 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 &lt;/soapenv:Body&gt;<br>
 &lt;/soapenv:Envelope&gt;<br>
 <b>-Şekil 6 Örnek İstek-<b/>
-
+</table>
 ##&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)
 <p>
   StringBuffer sb = new StringBuffer();&#8236;<br>
