@@ -323,4 +323,4 @@ akışının herhangi bir nedenle başarısız olması sonucunda kullanıcı, �
 Yönlendirme” yöntemi ile işyeri’ne yönlendirilir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516264/8cf5caf8-889b-11e4-811f-497f3706b03d.jpg)
-![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516264/8cf5caf8-889b-11e4-811f-497f3706b03d.jpg)
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516271/d820b088-889b-11e4-9d13-0399c38fda1e.jpg)
