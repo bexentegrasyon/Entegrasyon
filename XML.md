@@ -515,10 +515,10 @@ oluşturacağınız stringi oluşturmanız gerekiyor. Detay için, ilgili web
 servislerin açıklamalarındaki Java örneğine bakabilirsiniz.<br>
 
 - Null alanlar imzaya boş string olarak eklenmiş.<br>
-&nbsp;   &nbsp; o Null olan alanlarınızı “null” olarak imzalarınıza eklediğinizden emin olun.
+&nbsp;   &nbsp; &nbsp;  o Null olan alanlarınızı “null” olarak imzalarınıza eklediğinizden emin olun.
 Boolean değerleri imzanıza ve mesajınıza aynı şekilde eklediğinizden emin olun.<br>
 
-&nbsp;   &nbsp; o Mesajda “true” gelip imzanızda “1” yazdığınızda, imzalar uyuşmayacağından
+&nbsp;   &nbsp; &nbsp; o Mesajda “true” gelip imzanızda “1” yazdığınızda, imzalar uyuşmayacağından
 “MAC verification fail” hatası alacaksınız.
 
 <b>RequestMerchInfo web servisini hazırlayamıyorum</b>
