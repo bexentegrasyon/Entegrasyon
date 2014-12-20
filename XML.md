@@ -81,10 +81,10 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 &lt;/soapenv:Body&gt;<br>
 &lt;/soapenv:Envelope&gt;<br>
 
-Şekil 6 Örnek İstek
+<b>Şekil 6 Örnek İstek<b/>
 
-<p>&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)</p>
-<p><br>
+##<p>&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)</p>
+<p>
   StringBuffer sb = new StringBuffer();&#8236;<br>
   sb.append(mId).append(sUrl).append(cUrl).append(sAmount).append(cAmount);&#8236;<br>
   for(Bank aBank : bank)<br>
