@@ -133,3 +133,4 @@ Bu adım sonrasında kullanıcı Express sistemine yönlendirilir (redirect yap�
 “initializePayment Dönüş parametreleri” içinde alınan URL’e, token ile “Güvenlik” bölümünde
 belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
 
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516134/be71bd8c-8894-11e4-8ef8-82df7937b6d3.jpg)
