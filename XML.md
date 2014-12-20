@@ -28,7 +28,7 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 “105,99”, “85,00") iletilecektir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515911/4aa26596-888a-11e4-9ce2-6b3d947fa4c1.jpg)
-![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515923/e98866d8-888a-11e4-9726-b7fad57fc700.jpg)
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515943/043f1dae-888c-11e4-9c82-e84f5d8bb9a3.jpg)
 
 
 
