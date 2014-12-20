@@ -27,7 +27,7 @@ Bankalar için ayrı ayrı bilgi gönderilmeyecek ve tüm bankalar için tek tut
 Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuruş eklenerek (Örn:
 “105,99”, “85,00") iletilecektir.
 
-
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5515885/019b26e0-8889-11e4-9c51-b4a8117dea00.jpg)
 
 
 
