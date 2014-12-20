@@ -20,10 +20,10 @@ Kullanıcının işyerinden express sistemine yönlendirilirken işyeri tarafın
 Dönüş parametreleri içerisinde, BKM tarafından üretilecek olan token ve işyerinin express’e yönlendirme yapacağı URL bilgisi iletilir.
 Taksit seçeneği yer almayacak ve tek ödeme yapılacaksa;
 
--Her banka için taksit sayısı nofInst = 1 olarak iletilecektir.
+- Her banka için taksit sayısı nofInst = 1 olarak iletilecektir.
 
 Bankalar için ayrı ayrı bilgi gönderilmeyecek ve tüm bankalar için tek tutar iletilecekse;
--  id = 9999 olarak iletilecektir.
+- id = 9999 olarak iletilecektir.
 Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuruş eklenerek (Örn:
 “105,99”, “85,00") iletilecektir.
 
