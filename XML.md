@@ -368,3 +368,68 @@ Aşağıdaki bilgiler redirect edilecek URL’e GET parametresi olarak eklenecek
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516281/a80f9e62-889c-11e4-8119-ac4d2ac2591f.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516288/eab66e26-889c-11e4-952c-048bb8cf0874.jpg)
+
+&lt;PosResponse xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;<br>
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
+&lt;Host&gt;<br>
+&lt;AuthCode&gt;123456&lt;/AuthCode&gt;<br>
+&lt;RRN&gt;126ABA7DFB72&lt;/RRN&gt;<br>
+&lt;Date&gt;1234&lt;/Date&gt;<br>
+&lt;Time&gt;010106&lt;/Time&gt;<br>
+&lt;RC&gt;00&lt;/RC&gt;<br>
+&lt;/Host&gt;<br>
+&lt;Result&gt;<br>
+&lt;Code&gt;0&lt;/Code&gt;<br>
+&lt;Text /&gt;<br>
+&lt;ErrorMessage /&gt;<br>
+&lt;/Result&gt;<br>
+&lt;TrnxID&gt;830601d3-1808-4c73-8d64-39fae20644b7&lt;/TrnxID&gt;<br>
+&lt;TrnxType&gt;Sale&lt;/TrnxType&gt;<br>
+&lt;CustomData /&gt;<br>
+&lt;/PosResponse<br>
+<b>-Şekil 12 Gerçek POS mesajı-</b>
+
+{"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
+106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
+8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}
+<b>-Şekil 13 POS mesajının JSON formatına çevrilmiş hali-</b>
+
+###İşlem Bilgileri Sorgulama
+
+İşyeri, işlem için iletilen token bilgisini kullanarak, işlemin durumunu ve gerçekleşmişse
+ödeme bilgilerini, BKM Express’in bu servisi aracılığıyla sorgulayabilir.
+
+Bu dokümanın 2.8 sürümü ve 19 Kasım 2013 tarihi itibariyle işyerlerinin İşlem Bilgileri
+Servisini kullanabilmeleri mecburidir.
+
+Sorgulama servisi, özellikle işyerlerinin geçici olarak yaşayabilecekleri sorun sonrasında,
+aslında ödemesi gerçekleşen ancak ürün sağlanmayan işlemlerin tespiti için kullanılacaktır.
+
+İşyeri sorgulama yaptığında ödemesinin alındığını tespit ettiği işlemler için ilgili ürünleri
+müşteriye sağlamak ile yükümlüdür.
+
+Mevcut InitPayment servisi içerisindeki “QueryPaymentResult” metodu yardımıyla
+İşyeri, istekte bulunarak işlem sonuç bilgilerine ulaşılabilmektedir.
+
+Gönderilecek değerler aşağıdaki şekildedir.
+
+mId= merchantID,
+s= imza { mId , t , ts }
+t= token,
+ts= timestamp
+
+<b>** Bu alanlardan imza alanının diğer alanların birbiri ardına eklenmesi ve SHA256
+ile oluşturulan hash değerinin mac verify yöntemi ile doğrulanması gerekmektedir.
+Bu işlem için üye işyerleri BKM Express in RSA public keyini kullanmalıdır.</b>
+
+Servisin cevap parametreleri ise aşağıdaki şekildedir.
+
+t= token
+ts= timestamp
+s= imza {t, success, ts}
+success = işlem sonucu , boolean,
+
+<b>** Bu alanlardan imza alanının diğer alanların birbiri ardına eklenmesi ve SHA256
+ile oluşturulan hash değerinin mac verify yöntemi ile doğrulanması gerekmektedir.
+Bu işlem için üye işyerleri kendi RSA public keyini kullanmalıdır.</b>
+
