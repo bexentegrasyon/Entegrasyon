@@ -207,4 +207,5 @@ parametrelerle post yapmaktadır.
 &lt;/bkm:requestMerchInfo&gt;<br>
 &lt;/soapenv:Body&gt;<br>
 &lt;/soapenv:Envelope&gt;<br>
+<b>-Şekil 8 Örnek İstek-</b>
 
