@@ -250,12 +250,12 @@ parametrelerle post yapmaktadır.
 StringBuffer sb = new StringBuffer();‬<br>
 
 sb.append(t).append(posUrl)<br>
-  &nbsp;    .append(posUid).append(posPwd)<br>
-  &nbsp;    .append(s3Dauth).append(mpiUrl)<br>
-  &nbsp;    .append(mpiUid)‬ append(mpiPwd).<br>
-  &nbsp;    .append(md).append(xid)<br>
-  &nbsp;   .append(s3DFDec).append(cIp)<br>
-  &nbsp;    .append(extra).append(ts);‬<br>
+  &nbsp;  &nbsp;   .append(posUid).append(posPwd)<br>
+  &nbsp;   &nbsp;  .append(s3Dauth).append(mpiUrl)<br>
+  &nbsp;   &nbsp;  .append(mpiUid)‬ append(mpiPwd).<br>
+  &nbsp;   &nbsp;  .append(md).append(xid)<br>
+  &nbsp;   &nbsp; .append(s3DFDec).append(cIp)<br>
+  &nbsp;   &nbsp;  .append(extra).append(ts);‬<br>
   
 return sb.toString();‬<br>
 
