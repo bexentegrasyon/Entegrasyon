@@ -1,28 +1,23 @@
 #EK C - XML İle Paket Kullanılmadan Entegrasyon
 ##Entegrasyon Başlangıcı<br>
-Entegrasyona başlamanız için ilk olarak işyeri kaydınızın yapılması ve mid değerinin size
-ulaşmış olması gerekmektedir.
-Aynı zamanda 1024 veya 2048 boyutunda bir public key yaratıp bunu BKM’ye iletmeniz
-gerekmektedir.
+Entegrasyona başlamanız için ilk olarak işyeri kaydınızın yapılması ve mid değerinin size ulaşmış olması gerekmektedir.
+Aynı zamanda 1024 veya 2048 boyutunda bir public key yaratıp bunu BKM’ye iletmeniz gerekmektedir.
 Public key yaratmak için, Unix ortamında, Openssl ile;<br>
 openssl genrsa -out mykey.pem 1024 <br>
-openssl rsa -in mykey.pem -pubout > mykey.pub<br>
-komutlarını kullanabilirsiniz.
+openssl rsa -in mykey.pem -pubout > mykey.pub<br>  komutlarını kullanabilirsiniz.
 
-#Webservis Tanımları <br>
+##Webservis Tanımları <br>
 initializePayment Servisi için hazırlanan webservis tanımları aşağıda yer almaktadır.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5504655/146c6c74-8790-11e4-964e-4002e2abc3e0.png)
 
-#İşyeri Ödeme
-Kullanıcının express ekranına yönlendirilerek ödeme yapabilmesi için işyeri tarafından gerekli
-verilerin iletildiği adımdır.
-initializePayment Adımı
-Kullanıcının işyerinden express sistemine yönlendirilirken işyeri tarafından çağırılacak olan
-metoddur. İşlemin başarılı, başarısız gerçekleşme durumunda yönlendirilecek URL bilgileri ile
-son tutarı ve tüm taksit seçeneklerini içermelidir.
-Dönüş parametreleri içerisinde, BKM tarafından üretilecek olan token ve işyerinin express’e
-yönlendirme yapacağı URL bilgisi iletilir.
+##İşyeri Ödeme
+Kullanıcının express ekranına yönlendirilerek ödeme yapabilmesi için işyeri tarafından gerekli verilerin iletildiği adımdır.
+
+##initializePayment Adımı
+Kullanıcının işyerinden express sistemine yönlendirilirken işyeri tarafından çağırılacak olan metoddur. İşlemin başarılı, başarısız gerçekleşme durumunda yönlendirilecek URL bilgileri ile son tutarı ve tüm taksit seçeneklerini içermelidir.
+
+Dönüş parametreleri içerisinde, BKM tarafından üretilecek olan token ve işyerinin express’e yönlendirme yapacağı URL bilgisi iletilir.
 Taksit seçeneği yer almayacak ve tek ödeme yapılacaksa;
 
 -Her banka için taksit sayısı nofInst = 1 olarak iletilecektir.
