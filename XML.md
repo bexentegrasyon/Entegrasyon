@@ -391,7 +391,7 @@ xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
 
 {"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
 106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
-8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}
+8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}<br>
 <b>-Şekil 13 POS mesajının JSON formatına çevrilmiş hali-</b>
 
 ###İşlem Bilgileri Sorgulama
@@ -432,4 +432,19 @@ success = işlem sonucu , boolean,
 <b>** Bu alanlardan imza alanının diğer alanların birbiri ardına eklenmesi ve SHA256
 ile oluşturulan hash değerinin mac verify yöntemi ile doğrulanması gerekmektedir.
 Bu işlem için üye işyerleri kendi RSA public keyini kullanmalıdır.</b>
+
+
+###Sıkça Sorulan Sorular
+
+<b>Site üzerinden BKM’ye yönlenmeye çalıştığımda istek mesajım BKM’ye ulaşmıyor.
+Ne yapmalıyım?</b>
+
+- İstek mesajları, bize aşağıdaki nedenlerden ulaşmıyor olabilir.
+- “telnet preprod.bkmexpress.com.tr 9620” yapabildiğinizi
+- Web.config dosyasında doğru endpoint adresini verdiğinizi
+- BKM’ye ilettiğiniz public key ile sizin referans verdiğiniz public key değerinin aynı
+olduğunu
+- Web.config dosyalarında key path’lerinin doğru verildiğini
+- Web.config ‘in bulunduğu dosyaya okuma hakkınızın olduğunu
+kontrol etmelisiniz.
 
