@@ -108,3 +108,4 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 </p>
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516081/e16dca22-8891-11e4-9025-c8351cf28faa.jpg)
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516091/42b64890-8892-11e4-8d75-9af897673b34.jpg)
