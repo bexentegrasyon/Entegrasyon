@@ -324,3 +324,27 @@ Yönlendirme” yöntemi ile işyeri’ne yönlendirilir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516264/8cf5caf8-889b-11e4-811f-497f3706b03d.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516271/d820b088-889b-11e4-9d13-0399c38fda1e.jpg)
+
+Kullanılacak Sanal POS’a göre posMessage içerisinde iletilen bilgiler değişecektir. POS’tan
+dönen cevap içerisinde, Kredi Kartı ile ilgili bilgiler (PAN, CVC/CVV2, Son Kullanma Tarihi, Kart
+Sahibi İsmi) çıkartılacak ve bunun dışında kalan bilgiler JSON formatında iletilecektir. Sanal
+POS’tan dönen cevap için iletilecek posMessage örneği aşağıda yer almaktadır.
+
+&lt;PosResponse xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;<br>
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
+&lt;Host&gt;<br>
+&lt;AuthCode&gt;123456&lt;/AuthCode&gt;<br>
+&lt;RRN&gt;126ABA7DFB72&lt;/RRN&gt;<br>
+&lt;Date&gt;1234&lt;/Date&gt;<br>
+&lt;Time&gt;010106&lt;/Time&gt;<br>
+&lt;RC&gt;00&lt;/RC&gt;<br>
+&lt;/Host&gt;<br>
+&lt;Result&gt;<br>
+&lt;Code&gt;0&lt;/Code&gt;<br>
+&lt;Text /&gt;<br>
+&lt;ErrorMessage /&gt;<br>
+&lt;/Result&gt;<br>
+&lt;TrnxID&gt;830601d3-1808-4c73-8d64-39fae20644b7&lt;/TrnxID&gt;<br>
+&lt;TrnxType&gt;Sale&lt;/TrnxType&gt;<br>
+&lt;CustomData /&gt;<br>
+&lt;/PosResponse<br>
