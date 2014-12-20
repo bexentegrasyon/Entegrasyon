@@ -178,4 +178,4 @@ verilerinin express sistemi tarafından işyerinden istendiği adımdır.
 İşyeri, bu adımda bir web servis ile BKM’den gelen isteği karşılayıp cevap dönecektir.
 İşyerinin, hazırladığı web servisinin kullanılabilirliğini test etmesi gerekmektedir.
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516166/297fef08-8896-11e4-991b-2bf7abc7361d.jpg)
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516172/9346e400-8896-11e4-8445-112f176946bb.jpg)
