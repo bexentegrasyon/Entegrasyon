@@ -242,5 +242,5 @@ parametrelerle post yapmaktadır.
 &lt;/RequestMerchInfoWSResponse&gt;<br>
 &lt;/ns2:requestMerchInfoResponse&gt;<br>
 &lt;/S:Body&gt;<br>
-&lt;/S:Envelope&gt;
+&lt;/S:Envelope&gt;<br>
 <b>-Şekil 9 Örnek Dönüş-</b>
