@@ -82,7 +82,7 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 &lt;/soapenv:Envelope&gt;<br>
 <b>-Şekil 6 Örnek İstek-<b/>
 
-##&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)
+###&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)
 <p>
   StringBuffer sb = new StringBuffer();&#8236;<br>
   sb.append(mId).append(sUrl).append(cUrl).append(sAmount).append(cAmount);&#8236;<br>
@@ -135,7 +135,7 @@ belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516134/be71bd8c-8894-11e4-8ef8-82df7937b6d3.jpg)
 
-##Mobil İşyeri Uygulamasından Yönlendirme
+###Mobil İşyeri Uygulamasından Yönlendirme
 Mobil uygulamalar tarayıcıları POST metoduyla açamamaktadır. Bu sebeple yukarıda anlatılan
 yönlendirme gerçekleştirilememektedir. Bunun yerine üye işyerinin mobil uygulaması, işyeri
 sunucusundan aldığı token değerini BKM Mobil uygulamasının önceden kendilerine iletilmiş
@@ -170,7 +170,7 @@ yapar.<br>
 tarayıcıdan gelmiş ise, BKM Mobil uygulamasını açmaya çalışır, açamazsa uygulama
 indirme linkine yönlendirir.<br>
 
-##requestMerchInfo
+###requestMerchInfo
 
 Ödeme yapacağı kartı ve ödeme şeklini (taksit, peşin, taksit atlatmalı vb.) belirleyen
 kullanıcının ödemesini gerçekleştirebilmesi için işyeri tarafından iletilecek POS ve MPI
