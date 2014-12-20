@@ -365,3 +365,5 @@ adresine, “initializePayment Dönüş Parametreleri”inde yer alan token ile 
 bölümünde belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
 
 Aşağıdaki bilgiler redirect edilecek URL’e GET parametresi olarak eklenecektir.
+
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516281/a80f9e62-889c-11e4-8119-ac4d2ac2591f.jpg)
