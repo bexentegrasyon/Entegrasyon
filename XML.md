@@ -474,11 +474,53 @@ Burada kontrol etmeniz gereken bir kaç nokta mevcut :
 
 - Merchant olarak kaydınızı BKM’ye yaptırdınız mı? Bu kaydın sonunda size bir
 - “Merchant Id” tanımlanmış olmalı, yaptığınız istekte bu alanı kullanıyor musunuz?
-- Dökümanın başında yazılı talimatlardan olan private-public key çiftinizi ürettiniz mi?
-&nbsp;   &nbsp; o Ürettiyseniz public keyinizi BKM ile paylaştınız mı?
-&nbsp;   &nbsp; o Public keyinizi paylaştıysanız, BKM’nin keyinizi kaydettiğini doğrular mısınız?
+- Dökümanın başında yazılı talimatlardan olan private-public key çiftinizi ürettiniz mi?<br>
+&nbsp;   &nbsp; o Ürettiyseniz public keyinizi BKM ile paylaştınız mı?<br>
+&nbsp;   &nbsp; o Public keyinizi paylaştıysanız, BKM’nin keyinizi kaydettiğini doğrular mısınız?<br>
 - Yukarıdaki iki seçenekte de sorun yoksa bu sefer BKM’den, sizin için hata loglarını
 incelemelerini istemelisiniz.
+
+<b>Web servis çağrısı yapıyorum ama “Request Not Synchronized” hatası alıyorum.</b>
+
+Bu hatayı alıyor olmanızın sebebi; BKM’nin sunucuları ile sizin sunucularınız
+arasındaki zaman farkının kabul edilebilir düzeyin üstünde olmasıdır.
+
+Bu hatayı önlemek için; sunucu zaman ayarınızı NTP sunucularından almanız gerekmektedir.
+Örnek olarak; asia.pool.ntp.org üzerinden alabilirsiniz.
+
+<b>Key üretmede sıkıntı yaşıyorum</b>
+Windows bazlı, .Net geliştirme ortamına sahip sistem kullanıcıları, BKM’nin, sizlere
+sağladığı “Key Generator” uygulamasını kullanabilirsiniz.
+
+Unix bazlı sistemler için daha önce size iletilen komutları kullanabilirsiniz.
+
+<b>BKM’den aldığım wsdl dosyalarını çalıştırdığımda bağlantı hatası alıyorum.</b>
+
+Bkm’den aldığınız wsdl dosyasının endpointlerini kontrol edin. Eğer endpointlerde
+geçen değer localhost veya 127.0.0.1 ile başlıyorsa bağlanamamanız normal. BKM’den,
+bağlanma izniniz olan bir endpoint adresi isteyebilirsiniz.
+
+Bunların dışında bir adres görüp de yine de bağlanamamanız durumunda BKM’den konu ile
+ilgili yardım istemeniz gerekmektedir.
+
+<b>İmzalama ile ilgili sorunlar</b>
+
+İmzalama konusunda bir kaç temel problem yaşanabiliyor :<br>
+
+- İmza, istendiği şekilde alanların sırayla eklenmesi ile oluşturulmamış.
+
+&nbsp;   &nbsp; o Bu durum özellikle initialize payment metodunda yaşanıyor. Gönderdiğiniz
+her banka ve her taksit seçeneği için birer inner loop yaparak imza
+oluşturacağınız stringi oluşturmanız gerekiyor. Detay için, ilgili web
+servislerin açıklamalarındaki Java örneğine bakabilirsiniz.
+
+- Null alanlar imzaya boş string olarak eklenmiş.
+&nbsp;   &nbsp; o Null olan alanlarınızı “null” olarak imzalarınıza eklediğinizden emin olun.
+Boolean değerleri imzanıza ve mesajınıza aynı şekilde eklediğinizden emin olun.
+
+&nbsp;   &nbsp; o Mesajda “true” gelip imzanızda “1” yazdığınızda, imzalar uyuşmayacağından
+“MAC verification fail” hatası alacaksınız.
+
 
 
 
