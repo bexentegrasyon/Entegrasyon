@@ -265,3 +265,31 @@ Yalnızca requestMerchInfo adımında, sistemden dönebilecek kod listesidir. Se
 dönüş kodları listesi EK D’ de yer almaktadır.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516241/bd9249c6-889a-11e4-82a8-ee431c3245da.jpg)
+
+###Confirmation URL
+
+BKM Express sisteminde, sanal pos işlemlerinde başarılı sonucun işyerine ulaştırılması
+amacıyla 2 yöntem paralel kullanılmaktadır. Bunlardan akışa göre ilki, işyeri tarafından
+sağlanan confirmation URL’ye BKM Express sistemi tarafından bildirim yapılmasıdır.
+İşyerlerinin bu bildirimi alabilmek üzere confirmationURL çalışmasını yapması, ilk
+entegrasyonlarda isteğe bağlı bırakılmakla birlikte, bu dokümanın 2.8 sürümü ve 19 Kasım
+2013 tarihi itibariyle tüm işyerleri için mecburi hale getirilmiştir.
+
+BKM, işyeri tarafından açılacak confirmationURL adresine success URL’ye dönüş
+yapacağı alanları aynı formatta post edecektir.
+
+İşyeri, confirmationURL’ye yapılan bildirimleri, BKM Express’ten geşdiğini succes URL
+tarafı ile aynı şekilde kontrol edecektir (imza kontrolü v.b.). Eğer bildirim gerçekten BKM
+Express tarafından yapılıyor ve SanalPOS’tan onay alındığını bildiriyorsa, bu adımda işyerinin
+ürünü müştriye sağlayacak adımları başlatması gerekir (müşterinin email ile bilgilendirmesi,
+işlem statü güncellemesi, stok hareketi v.b.)
+
+Eğer bir sonraki adımda açıklanacak şekilde kullanıcı redirect ile işyerine giderken bir
+sorun yaşarsa, zaten confirmationURL adımında ürün sağlama başlayacağı için, kullanıcı
+
+ &nbsp;   &nbsp; 1- İşyeri sayfasına yeniden girip “Siparişlerim” adımına baktığında, siparişinin
+onaylandığını görmelidir.
+
+ &nbsp;   &nbsp; 2- Aynı şekilde işyeri email ile bildirim de yapıyorsa, kullanıcı email ile siparişin başarılı
+gerçekleştiğini görebiliyor olmalıdır.
+
