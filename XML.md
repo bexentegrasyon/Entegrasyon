@@ -367,3 +367,4 @@ bölümünde belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
 Aşağıdaki bilgiler redirect edilecek URL’e GET parametresi olarak eklenecektir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516281/a80f9e62-889c-11e4-8119-ac4d2ac2591f.jpg)
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516288/eab66e26-889c-11e4-952c-048bb8cf0874.jpg)
