@@ -83,3 +83,25 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 
 Şekil 6 Örnek İstek
 
+İmza oluşturmak için alanların birleştirilmesi örneği (Java Kodu)
+StringBuffer sb = new StringBuffer();‬
+sb.append(mId).append(sUrl).append(cUrl).append(sAmount).append(cAmount);‬
+for(Bank aBank : bank)
+{‬
+    sb.append(aBank.getId()).append(aBank.getName())
+                            .append(aBank.getExpBank());‬
+for(Bin bin : aBank.getBin())
+{‬
+    sb.append(bin.getValue());‬
+for(Installment inst : bin.getInst())
+{‬
+sb.append(inst.getNofInst()).append(inst.getAmountInst())
+                            .append(inst.getcAmount())‬
+                            .append(inst.gettAmount())
+                            .append(inst.iscPaid1stInst())
+                            .append(inst.getExpInst());‬
+}‬
+}‬
+}‬
+sb.append(ts);‬
+return sb.toString();
