@@ -245,13 +245,13 @@ parametrelerle post yapmaktadır.
 &lt;/S:Envelope&gt;<br>
 <b>-Şekil 9 Örnek Dönüş-</b>
 
-<b>İmza oluşturmak için alanların birleştirilmesi örneği(Java Kodu)</b>
+<b>İmza oluşturmak için alanların birleştirilmesi örneği(Java Kodu)</b><br>
 StringBuffer sb = new StringBuffer();‬<br>
 sb.append(t).append(posUrl)<br>
-    .append(posUid).append(posPwd)<br>
-    .append(s3Dauth).append(mpiUrl)<br>
-    .append(mpiUid)‬ append(mpiPwd).<br>
-    .append(md).append(xid)<br>
-    .append(s3DFDec).append(cIp)<br>
+  - append(posUid).append(posPwd)<br>
+  - append(s3Dauth).append(mpiUrl)<br>
+  - append(mpiUid)‬ append(mpiPwd).<br>
+  - append(md).append(xid)<br>
+  - append(s3DFDec).append(cIp)<br>
     .append(extra).append(ts);‬<br>
 return sb.toString();‬<br>
