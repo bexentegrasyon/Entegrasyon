@@ -264,3 +264,4 @@ return sb.toString();‬<br>
 Yalnızca requestMerchInfo adımında, sistemden dönebilecek kod listesidir. Servisin tüm
 dönüş kodları listesi EK D’ de yer almaktadır.
 
+![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516241/bd9249c6-889a-11e4-82a8-ee431c3245da.jpg)
