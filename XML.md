@@ -134,3 +134,11 @@ Bu adım sonrasında kullanıcı Express sistemine yönlendirilir (redirect yap�
 belirtilen imzalama yöntemi dikkate alınarak gerçekleştirilir.
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516134/be71bd8c-8894-11e4-8ef8-82df7937b6d3.jpg)
+
+##Mobil İşyeri Uygulamasından Yönlendirme
+Mobil uygulamalar tarayıcıları POST metoduyla açamamaktadır. Bu sebeple yukarıda anlatılan
+yönlendirme gerçekleştirilememektedir. Bunun yerine üye işyerinin mobil uygulaması, işyeri
+sunucusundan aldığı token değerini BKM Mobil uygulamasının önceden kendilerine iletilmiş
+olan URL’i ile birleştirerek açmalıdır.
+<b>1.<b/> Kullanıcı mobil işyeri uygulamasından ödeme yapma seçeneğine gelir.
+
