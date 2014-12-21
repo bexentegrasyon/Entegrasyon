@@ -82,3 +82,71 @@ yapar.
 tarayıcıdan gelmiş ise, BKM Mobil uygulamasını açmaya çalışır, açamazsa uygulama
 indirme linkine yönlendirir.
 
+
+Bundan sonra akış BKM Express'e geçer. Burada kart seçimi sonrası OTP doğrulaması
+yapıldıktan sonra akış tekrar merchant tarafına web servis çağrısı olarak geçer. Burada diğer
+entegrasyon dökümanında anlatıldığı gibi requestMerchInfo web servisi çağırılır. BKM
+Expresse verilen service url inde RequestMerchInfoServer.php ın yer aldığı teyit edilmelidir.
+Bu dosyadaki RequestMerchInfoServiceImpl sınıfı gerekli metodu handle etmektedir.
+
+
+Ayrıca bu dosyada yer alan RequestMerchInfoService_latest.wsdl
+dosyası da web servisin konumuna göre güncellenmelidir. Bu web servis sınıfında bundan başka dikket
+edilmesi gereken iki nokta var:
+
+1. Seçilen bankaya göre belirlenecek sanal pos ve mpi bilgileri
+Burada kullanılan sınıfın adı MerchantInfoActionImpl. Bu sınıfın
+public function getVirtualPos($bankId){
+imzalı metodu sanal pos bilgisini dönüyor. Bu metod şu anda dummy datalar
+dönüyor.
+
+<b>Önemli Not: Her merchantın bu metodu kendi yapısına göre düzenlemesi gerekiyor.</b>
+
+
+2. BKM Express ten gelen isteğin imzasının doğrulanması
+
+<b>Önemli Not: imzalama ve doğrulama metodlarının çalışabilmesi için PHP nin
+Openssl desteğinin açık olması gerekmektedir. Ayrıca son versiyonların kullanılmasına dikkat
+edilmesi gerekli, eski versiyon php ve openssllerde hash metodlarının çalışmadığı tespit
+edilmiştir.</b>
+
+
+BKM tarafından gerekli public keyler elde edilene kadar test işlemlerine
+devam edebilmek için imza doğrulanması kısmı comment out edilmiş durumda. Bunun da
+uygun koşullar oluşunca commentlerinin kaldırılması gerekiyor.
+
+Sonuçların dönmesi konusunda, ilk başta initPayment çağrısında gönderilen success
+url ve cancel urller geçerli. Bunlara karşılık olarak kütüphanede success.php ve fail.php
+olarak iki dosya oluşturuldu. Bu sayfalarda ilk olarak gelen tüm parametreler ekrana
+var_dump yapılıyor. Daha sonra da ilgili IncomingResultModel sınıfının nesnesine çevriliyor.
+Buradan sonrasını da her merchant kendi isteğine göre kodlamaya devam edebilir.
+
+###Confirmation URL
+
+BKM Express sisteminde, sanal pos işlemlerinde başarılı sonucun işyerine ulaştırılması
+amacıyla 2 yöntem paralel kullanılmaktadır. Bunlardan akışa göre ilki, işyeri tarafından
+sağlanan confirmation URL’ye BKM Express sistemi tarafından bildirim yapılmasıdır.
+İşyerlerinin bu bildirimi alabilmek üzere confirmationURL çalışmasını yapması, ilk
+entegrasyonlarda isteğe bağlı bırakılmakla birlikte, bu dokümanın 2.8 sürümü ve 19 Kasım
+2013 tarihi itibariyle tüm işyerleri için <b>mecburi</b> hale getirilmiştir.
+
+BKM, işyeri tarafından açılacak confirmationURL adresine success URL’ye dönüş
+yapacağı alanları aynı formatta <b>post edecektir.</b>
+
+İşyeri, confirmationURL’ye yapılan bildirimleri, BKM Express’ten geşdiğini succes URL
+tarafı ile aynı şekilde kontrol edecektir (imza kontrolü v.b.). Eğer bildirim gerçekten BKM
+Express tarafından yapılıyor ve SanalPOS’tan onay alındığını bildiriyorsa, bu adımda işyerinin
+ürünü müştriye sağlayacak adımları başlatması gerekir (müşterinin email ile bilgilendirmesi,
+işlem statü güncellemesi, stok hareketi v.b.)
+
+Eğer bir sonraki adımda açıklanacak şekilde kullanıcı redirect ile işyerine giderken bir
+sorun yaşarsa, zaten confirmationURL adımında ürün sağlama başlayacağı için, kullanıcı
+
+1- İşyeri sayfasına yeniden girip “Siparişlerim” adımına baktığında, siparişinin
+onaylandığını görmelidir
+
+2- Aynı şekilde işyeri email ile bildirim de yapıyorsa, kullanıcı email ile siparişin başarılı
+gerçekleştiğini görebiliyor olmalıdır.
+
+
+
