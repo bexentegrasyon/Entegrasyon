@@ -279,4 +279,19 @@ ile oluşturulan hash değerinin mac verify yöntemi ile doğrulanması gerekmek
 Bu işlem için üye işyerleri kendi RSA public keyini kullanmalıdır.</b>
 
 
+##Sıkça Sorulan Sorular
+
+<b>Site üzerinden BKM’ye yönlenmeye çalıştığımda istek mesajım BKM’ye ulaşmıyor.
+Ne yapmalıyım?</b>
+
+İstek mesajları, bize aşağıdaki nedenlerden ulaşmıyor olabilir
+
+- “telnet preprod.bkmexpress.com.tr 9620” yapabildiğinizi
+- Web.config dosyasında doğru endpoint adresini verdiğinizi
+- BKM’ye ilettiğiniz public key ile sizin referans verdiğiniz public key değerinin aynı
+olduğunu
+  Web.config dosyalarında key path’lerinin doğru verildiğini
+- Web.config ‘in bulunduğu dosyaya okuma hakkınızın olduğunu
+kontrol etmelisiniz.
+
 
