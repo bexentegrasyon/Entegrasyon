@@ -94,16 +94,16 @@ Ayrıca bu dosyada yer alan RequestMerchInfoService_latest.wsdl
 dosyası da web servisin konumuna göre güncellenmelidir. Bu web servis sınıfında bundan başka dikket
 edilmesi gereken iki nokta var:
 
-1. Seçilen bankaya göre belirlenecek sanal pos ve mpi bilgileri
-Burada kullanılan sınıfın adı MerchantInfoActionImpl. Bu sınıfın
-public function getVirtualPos($bankId){
+1- Seçilen bankaya göre belirlenecek sanal pos ve mpi bilgileri<br>
+Burada kullanılan sınıfın adı MerchantInfoActionImpl. Bu sınıfın<br>
+public function getVirtualPos($bankId){ <br>
 imzalı metodu sanal pos bilgisini dönüyor. Bu metod şu anda dummy datalar
 dönüyor.
 
 <b>Önemli Not: Her merchantın bu metodu kendi yapısına göre düzenlemesi gerekiyor.</b>
 
 
-2. BKM Express ten gelen isteğin imzasının doğrulanması
+2- BKM Express ten gelen isteğin imzasının doğrulanması
 
 <b>Önemli Not: imzalama ve doğrulama metodlarının çalışabilmesi için PHP nin
 Openssl desteğinin açık olması gerekmektedir. Ayrıca son versiyonların kullanılmasına dikkat
