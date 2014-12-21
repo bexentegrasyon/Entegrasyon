@@ -24,13 +24,13 @@ bir nesne üretilmiş ve bu nesne gerekli değerler ile construct edilmiştir. B
 işlemden işleme ve merchanttan merchanta değişeceği için, kütüphaneyi kullanan
 merchantlar tarafından güncellenmelidir.
 
-<b> ÖNEMLİ NOT: Imzalama ve doğrulama metodlarının çalışabilmesi için 
+<b> ÖNEMLİ NOT: Imzalama ve doğrulama metodlarının çalışabilmesi için </b>
 
-1. Kendi private-public key çiftinizi üretmiş olmanız ve public keyinizi pem formatında BKM ile
-   paylasmış olmanız <br>
-2. BKM nin public keyini pem formatında elde etmiş olmanız gereklidir.<br>
+<b>1. Kendi private-public key çiftinizi üretmiş olmanız ve public keyinizi pem formatında BKM ile
+   paylasmış olmanız. </b><br>
+<b>2. BKM nin public keyini pem formatında elde etmiş olmanız gereklidir.</b><br>
 
-Bu anahtarlar kütüphanede mykey.pem → private key, bkm.pub → bkmnin public keyi
+<b>Bu anahtarlar kütüphanede mykey.pem → private key, bkm.pub → bkmnin public keyi
 olarak geçmektedir. bkm.pub sonrada projeye eklenmelidir.</b>
 
 Bu nesnenin işlemi başlatması için initPayment metodunun çağrılması gereklidir. Bu
