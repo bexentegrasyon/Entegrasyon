@@ -326,4 +326,16 @@ Burada kontrol etmeniz gereken bir kaç nokta mevcut : <br>
 - Yukarıdaki iki seçenekte de sorun yoksa bu sefer BKM’den, sizin için hata loglarını
 incelemelerini istemelisiniz.
 
+<b>Web servis çağrısı yapıyorum ama “Request Not Synchronized” hatası alıyorum.</b>
 
+Bu hatayı alıyor olmanızın sebebi; BKM’nin sunucuları ile sizin sunucularınız
+arasındaki zaman farkının kabul edilebilir düzeyin üstünde olmasıdır.<br>
+Bu hatayı önlemek için; sunucu zaman ayarınızı NTP sunucularından almanız gerekmektedir.<br>
+Örnek olarak; asia.pool.ntp.org üzerinden alabilirsiniz.
+
+<b>Key üretmede sıkıntı yaşıyorum</b>
+
+Windows bazlı, .Net geliştirme ortamına sahip sistem kullanıcıları, BKM’nin, sizlere
+sağladığı “Key Generator” uygulamasını kullanabilirsiniz.
+
+Unix bazlı sistemler için daha önce size iletilen komutları kullanabilirsiniz.
