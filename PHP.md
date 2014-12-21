@@ -149,4 +149,40 @@ onaylandığını görmelidir
 gerçekleştiğini görebiliyor olmalıdır.
 
 
+###İşyerine Başarılı İşlem Sonucu Yönlendirme
+
+Express ödeme akışının başarıyla tamamlandığı durumlarda express sisteminin işyerine
+yaptığı geri yönlendirmedir. “initializePayment İstek Parametreleri” içinde alınan sUrl’e
+aşağıdaki bilgiler http formu içerisinde hidden alan olarak post edilecektir.
+
+Eğer işlem mobil uygulamadan geliyor ise mobil uygulamanın successURL’ine sadece token
+iletilecek uygulama da bu token ile kendi serverına daha önceden iletilmiş (İşyerinin
+confirmationURL adresine bir önceki adımda yapılan bildirimdir) olan işlem sonucunu
+sorabilecektir. Eğer işlem web üzerinden yapılıyorsa, confirmationURL adresine de bildirilmiş
+olan standart tüm alanlar, redirect ile de işyerine tekrar bildirilmektedir.
+
+Bilgiler “Güvenlik” bölümünde ve aşağıda belirtilen imzalama yöntemi dikkate alınarak
+imzalanacaktır. Ödeme akışının herhangi bir nedenle başarısız olması sonucunda kullanıcı,
+“İşyerine İptal için Yönlendirme” yöntemi ile işyeri’ne yönlendirilir.
+
+Önemli Not: confirmationURL adresine BKM Express tarafından yapılan bildirim başarılı ve
+imza kontrolünden geçmiş ise , redirect ile yapılan bildirimde imzanın tutmaması, sipariş iptali
+için yeterli neden değildir. Ancak bu tip bir redirect’te işyeri sayfasında hata gösterilmesi
+önerilir.
+
+
+###BKM – İşyeri Arasındaki Mesaj İmzalama Ve İmza Doğrulama
+
+1- Satış başlatma web servis çağrısı için imzalama<br>
+Bu özelliğin kullanılması için temel olarak utilities.php dosyasındaki sign
+metodu kullanılır.
+
+Bu metodun imzası :<br>
+<b>function sign($data, $privateKey)</b>
+
+Burada $data parametresi imzalanacak olan veri, $privateKey ise merchantın
+kendine ait olan rsa şifresinin private kısmıdır. Projede örnek olarak mykem.pem dosyası
+bulunmaktadır. Bu dosyanın içeriği gene utililties.php de yeralan<br>
+<b>function readKeyFromFile($filename){</b>
+
 
