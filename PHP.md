@@ -10,7 +10,7 @@ gerekmektedir.<br>
 
 Public key yaratmak için, Unix ortamında, Openssl ile;<br<
 
-openssl genrsa -out mykey.pem 1024<br>
-openssl rsa -in mykey.pem -pubout > mykey.pub<br>
+&nbsp; openssl genrsa -out mykey.pem 1024<br>
+&nbsp; openssl rsa -in mykey.pem -pubout > mykey.pub<br>
 
 komutlarını kullanabilirsiniz.
