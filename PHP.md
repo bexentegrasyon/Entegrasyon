@@ -174,6 +174,7 @@ için yeterli neden değildir. Ancak bu tip bir redirect’te işyeri sayfasınd
 ###BKM – İşyeri Arasındaki Mesaj İmzalama Ve İmza Doğrulama
 
 1- Satış başlatma web servis çağrısı için imzalama<br>
+
 Bu özelliğin kullanılması için temel olarak utilities.php dosyasındaki sign
 metodu kullanılır.
 
@@ -184,5 +185,59 @@ Burada $data parametresi imzalanacak olan veri, $privateKey ise merchantın
 kendine ait olan rsa şifresinin private kısmıdır. Projede örnek olarak mykem.pem dosyası
 bulunmaktadır. Bu dosyanın içeriği gene utililties.php de yeralan<br>
 <b>function readKeyFromFile($filename){</b>
+metodu ile okunabilir.
+
+Bilindiği gibi işlem başlatma web servis çağrısının imzalanması için parametrelerinin de sırayla
+birleştirilmesi gerekiyor.Bu işlem için de ayrıca InitPaymentInterface.php dosyasındaki
+initPaymentActionImpl sınıfının prepareHash metodundan yararlanılabilir.
+
+public function prepareHash($params)
+
+2- Sanal pos bilgi web servisi için imzalama ve doğrulama<br>
+
+İmzalama özelliğinin kullanılabilmesi için RequestMerchInfoInterface.php
+dosyasında yer alan MerchantInfoActıonImpl örnek sınıfı kullanılmalıdır. Bu sınıftaki
+public function signResponse($response){ <br>
+metoduna parametre olarak response nesnesi geçirildiğinde geriye imzalanmış ve base64
+için encode edilmiş string dönülmektedir.
+
+Dogrulama içinse aynı sınıfın<br>
+public function verifyRequest($signature, $requestObj){ 
+
+imzalı metodu kullanılmaldır. Burada metodun bkm.pub isimli yine pem formatında BKM
+Express in public keyini içeren bir dosya okuduğuna dikkat edilmelidir. Dilendiği takdirde
+dosyanın adı değiştirilebilir.
+
+###Projedeki Dosyaların Listesi Ve Kullanım Amaçları
+
+1- BkmExpressPaymentService.php : initPayment web servis çağrısında kullanılması gereken
+    tüm sınıfların bulunduğu dosya.
+    
+2- InitPaymentInterface.php : initPayment web servisinin çağrılması için gerekli operasyon
+    sınıfının bulunduğu dosya.
+    
+3- RedirectData.php : initPayment çağrısı sonrasında gelen dataların, hidden form şeklinde
+    post edilmesi için kullanılan ara data sınıfının olduğu dosya. Bu dosyada ayrıca işlem
+    sonucunda gelen sonuç datasının da tutulacağı sınıfın tanımı yer alıyor.
+    
+4- RequestMerchInfoInterface.php : Bu dosyada VirtualPos yardımcı sınıfı tanımlanmıs.
+    Ayrıca BKM den geri dönüş kodları için de tanımlamalar mevcut. Ayrıca imzalama ve
+    doğrulama işlerini yapan ve her merchant tarafından pos bilgilerini aldığı metodu yeniden
+    yazılması gereken MerchantInfoActionImpl sınıfı da burada yer alıyor.
+    
+5- RequestMerchInfoServer.php : requestMerchInfo web servis metodunun handle edildiği
+    dosya
+    
+6- RequestMerchInfoService.php : requestMerchInfo web servisi için gerekli tüm sınıfların
+    tanımlandığı dosya
+    
+7- fail.php : başarısız sonucun döndüğü dosya
+
+8- success.php : başarılı sonucun döndüğü dosya
+
+9- initPurchaseRedirect.php : hidden form ile işlemin BKM Expresse aktarıldığı dosya
+
+10-requestMerchInfo_client_test.php : requestMerchInfo servisini dogrudan test etmek için
+
 
 
