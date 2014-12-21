@@ -319,9 +319,9 @@ Burada kontrol etmeniz gereken bir kaç nokta mevcut : <br>
 - Merchant olarak kaydınızı BKM’ye yaptırdınız mı? Bu kaydın sonunda size bir
 “Merchant Id” tanımlanmış olmalı, yaptığınız istekte bu alanı kullanıyor musunuz?
 
-- Dökümanın başında yazılı talimatlardan olan private-public key çiftinizi ürettiniz mi?
-&nbsp; &nbsp;  o Ürettiyseniz public keyinizi BKM ile paylaştınız mı?
-&nbsp; &nbsp;  o Public keyinizi paylaştıysanız, BKM’nin keyinizi kaydettiğini doğrular mısınız?
+- Dökümanın başında yazılı talimatlardan olan private-public key çiftinizi ürettiniz mi?<br>
+&nbsp; &nbsp;  o Ürettiyseniz public keyinizi BKM ile paylaştınız mı?<br>
+&nbsp; &nbsp;  o Public keyinizi paylaştıysanız, BKM’nin keyinizi kaydettiğini doğrular mısınız?<br>
 
 - Yukarıdaki iki seçenekte de sorun yoksa bu sefer BKM’den, sizin için hata loglarını
 incelemelerini istemelisiniz.
