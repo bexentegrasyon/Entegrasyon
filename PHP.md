@@ -184,7 +184,7 @@ Bu metodun imzası :<br>
 Burada $data parametresi imzalanacak olan veri, $privateKey ise merchantın
 kendine ait olan rsa şifresinin private kısmıdır. Projede örnek olarak mykem.pem dosyası
 bulunmaktadır. Bu dosyanın içeriği gene utililties.php de yeralan<br>
-<b>function readKeyFromFile($filename){</b>
+<b>function readKeyFromFile($filename){ </b> <br>
 metodu ile okunabilir.
 
 Bilindiği gibi işlem başlatma web servis çağrısının imzalanması için parametrelerinin de sırayla
@@ -237,7 +237,46 @@ dosyanın adı değiştirilebilir.
 
 9- initPurchaseRedirect.php : hidden form ile işlemin BKM Expresse aktarıldığı dosya
 
-10-requestMerchInfo_client_test.php : requestMerchInfo servisini dogrudan test etmek için
+10-requestMerchInfo_client_test.php : requestMerchInfo servisini dogrudan test etmek için hazırlanmış test dosyası
+
+11- test_lib.php : Tüm işlem akışının testinin başlatıldığı dosya
+
+12- utilities.php : imzalama, doğrulama, anahtar okuma gibi işlevlerin yer aldığı dosya.
+
+###İşlem Bilgileri Sorgulama
+
+İşyeri, işlem için iletilen token bilgisini kullanarak, işlemin durumunu ve gerçekleşmişse
+ödeme bilgilerini, BKM Express’in bu servisi aracılığıyla sorgulayabilir
+Bu dokümanın 2.8 sürümü ve 19 Kasım 2013 tarihi itibariyle işyerlerinin İşlem Bilgileri
+Servisini kullanabilmeleri <b>mecburidir.</b>
+
+Sorgulama servisi, özellikle işyerlerinin geçici olarak yaşayabilecekleri sorun sonrasında,
+aslında ödemesi gerçekleşen ancak ürün sağlanmayan işlemlerin tespiti için kullanılacaktır.
+İşyeri sorgulama yaptığında ödemesinin alındığını tespit ettiği işlemler için ilgili ürünleri
+müşteriye sağlamak. ile yükümlüdür.
+
+Mevcut InitPayment servisi içerisindeki “QueryPaymentResult” metodu yardımıyla
+İşyeri, istekte bulunarak işlem sonuç bilgilerine ulaşılabilmektedir.
+
+Gönderilecek değerler aşağıdaki şekildedir.<br>
+mId= merchantID,<br>
+s= imza { mId , t , ts }<br>
+t= token,<br>
+ts= timestamp<br>
+
+<b>** Bu alanlardan imza alanının diğer alanların birbiri ardına eklenmesi ve SHA256
+ile oluşturulan hash değerinin mac verify yöntemi ile doğrulanması gerekmektedir.
+Bu işlem için üye işyerleri BKM Express in RSA public keyini kullanmalıdır.</b>
+
+Servisin cevap parametreleri ise aşağıdaki şekildedir.<br>
+t= token<br>
+ts= timestamp<br>
+s= imza {t, success, ts}<br>
+success = işlem sonucu , boolean,<br>
+
+<b>** Bu alanlardan imza alanının diğer alanların birbiri ardına eklenmesi ve SHA256
+ile oluşturulan hash değerinin mac verify yöntemi ile doğrulanması gerekmektedir.
+Bu işlem için üye işyerleri kendi RSA public keyini kullanmalıdır.</b>
 
 
 
