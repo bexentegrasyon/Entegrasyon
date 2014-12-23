@@ -362,7 +362,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 ```xml
 {"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
 106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
-8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}<br>
+8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}
 ```
 <b>-Şekil 11 POS mesajının JSON formatına çevrilmiş hali-</b>
 
@@ -402,9 +402,12 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 ```
 <b>-Şekil 12 Gerçek POS mesajı-</b>
 
+```xml
 {"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
 106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
-8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}<br>
+8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}
+
+```
 <b>-Şekil 13 POS mesajının JSON formatına çevrilmiş hali-</b>
 
 ###İşlem Bilgileri Sorgulama
