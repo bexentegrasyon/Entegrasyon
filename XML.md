@@ -195,23 +195,24 @@ confirmation URL yapısı kullanılmaktadır.
 İşyeri, BKM’ye, işlem sonucunun success URL öncesi teyid amaçlı işyerine dönülmesi
 için bir URL bilgisi vermelidir. BKM, bu URL e, success URL e dönüş yapmadan önce aynı
 parametrelerle post yapmaktadır.
-
-&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt;<br>
-&lt;soapenv:Header/&gt;<br>
-&lt;soapenv:Body&gt;<br>
-&lt;bkm:requestMerchInfo&gt;<br>
-&lt;requestMerchInfoWSRequest&gt;<br>
-&lt;t&gt;186005784745383&lt;/t&gt;<br>
-&lt;bid&gt;123&lt;/bid&gt;<br>
-&lt;bName&gt;BankaIsmi&lt;/bName&gt;<br>
-&lt;cBin&gt;458652&lt;/cBin&gt;<br>
-&lt;nofInst&gt;2&lt;/nofInst&gt;<br>
-&lt;ts&gt;20110729-15:05:23&lt;/ts&gt;<br>
-&lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt;<br>
-&lt;/requestMerchInfoWSRequest&gt;<br>
-&lt;/bkm:requestMerchInfo&gt;<br>
-&lt;/soapenv:Body&gt;<br>
-&lt;/soapenv:Envelope&gt;<br>
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://merchant.ws.expressbkm.com.tr/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <bkm:requestMerchInfo>
+      <requestMerchInfoWSRequest>
+        <t>186005784745383</t>
+        <bid>123</bid>
+        <bName>BankaIsmi</bName>
+        <cBin>458652</cBin>
+        <nofInst>2</nofInst>
+        <ts>20110729-15:05:23</ts>
+        <s>PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=</s>
+      </requestMerchInfoWSRequest>
+    </bkm:requestMerchInfo>
+  </soapenv:Body>
+</soapenv:Envelope>
+```
 <b>-Şekil 8 Örnek İstek-</b>
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516187/7c991d44-8897-11e4-9568-994a955d288a.jpg)
@@ -219,50 +220,51 @@ parametrelerle post yapmaktadır.
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516201/651a85b2-8898-11e4-80d1-c028c649bb84.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516204/a7b45588-8898-11e4-8e50-a9c58816682a.jpg)
 
-
-&lt;S:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;<br>
-&lt;S:Body&gt;<br>
-&lt;ns2:requestMerchInfoResponse xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt;<br>
-&lt;RequestMerchInfoWSResponse&gt;<br>
-&lt;t&gt;186005784745383&lt;/t&gt;<br>
-&lt;posUrl&gt;https://posUrl.jsp&lt;/posUrl&gt;<br>
-&lt;posUid&gt;posUsername&lt;/posUid&gt;<br>
-&lt;posPwd&gt;posPassword&lt;/posPwd&gt;<br>
-&lt;s3DAuth&gt;0&lt;/s3DAuth&gt;<br>
-&lt;mpiUrl&gt;https://mpiUrl.jsp&lt;/mpiUrl&gt;<br>
-&lt;mpiUid&gt;mpiUsername&lt;/mpiUid&gt;<br>
-&lt;mpiPwd&gt;mpiPassword&lt;/mpiUid&gt;<br>
-&lt;md&gt;23456&lt;/md&gt;<br>
-&lt;xid&gt;NjQ5MThjYmQ2MTFmNWE1MGRiNDg=&lt;/xid&gt;<br>
-&lt;s3DFDec&gt;0&lt;/s3DFDec&gt;<br>
-&lt;cIp&gt;88.247.126.211&lt;/cIp&gt;<br>
-&lt;extra&gt;{&quot;posno&quot;:&quot;P000007&quot;,&quot;xcip&quot;:&quot;EDF2556SA&quot;}&lt;/extra&gt;<br>
-&lt;ts&gt;20110729-15:05:23&lt;/ts&gt;<br>
-&lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt;<br>
-&lt;res&gt;<br>
-&lt;resCode&gt;0&lt;/resCode&gt;<br>
-&lt;resMsg&gt;Success&lt;/resMsg&gt;<br>
-&lt;resDet/&gt;<br>
-&lt;/res&gt;<br>
-&lt;/RequestMerchInfoWSResponse&gt;<br>
-&lt;/ns2:requestMerchInfoResponse&gt;<br>
-&lt;/S:Body&gt;<br>
-&lt;/S:Envelope&gt;<br>
+```xml
+<S:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <S:Body>
+   <ns2:requestMerchInfoResponse xmlns:ws="http://merchant.ws.expressbkm.com.tr/">
+     <RequestMerchInfoWSResponse>
+        <t>186005784745383</t>
+        <posUrl>https://posUrl.jsp</posUrl>
+        <posUid>posUsername</posUid>
+        <posPwd>posPassword</posPwd>
+        <s3DAuth>0</s3DAuth>
+        <mpiUrl>https://mpiUrl.jsp</mpiUrl>
+        <mpiUid>mpiUsername</mpiUid>
+        <mpiPwd>mpiPassword</mpiUid>
+        <md>23456</md>
+        <xid>NjQ5MThjYmQ2MTFmNWE1MGRiNDg=</xid>
+        <s3DFDec>0</s3DFDec>
+        <cIp>88.247.126.211</cIp>
+        <extra>{"posno":"P000007","xcip":"EDF2556SA"}</extra>
+        <ts>20110729-15:05:23</ts>
+        <s>PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=</s>
+        <res>
+            <resCode>0</resCode>
+            <resMsg>Success</resMsg>
+            <resDet/>
+        </res>
+      </RequestMerchInfoWSResponse>
+    </ns2:requestMerchInfoResponse>
+  </S:Body>
+</S:Envelope>
+```
 <b>-Şekil 9 Örnek Dönüş-</b>
 
 ###İmza oluşturmak için alanların birleştirilmesi örneği(Java Kodu)<br>
 
-StringBuffer sb = new StringBuffer();‬<br>
-
-sb.append(t).append(posUrl)<br>
-  &nbsp;  &nbsp;   .append(posUid).append(posPwd)<br>
-  &nbsp;   &nbsp;  .append(s3Dauth).append(mpiUrl)<br>
-  &nbsp;   &nbsp;  .append(mpiUid)‬ append(mpiPwd).<br>
-  &nbsp;   &nbsp;  .append(md).append(xid)<br>
-  &nbsp;   &nbsp; .append(s3DFDec).append(cIp)<br>
-  &nbsp;   &nbsp;  .append(extra).append(ts);‬<br>
-  
-return sb.toString();‬<br>
+```java
+StringBuffer sb = new StringBuffer();‬
+sb.append(t).append(posUrl)
+    .append(posUid).append(posPwd)
+    .append(s3Dauth).append(mpiUrl)
+    .append(mpiUid)‬ append(mpiPwd).
+    .append(md).append(xid)
+    .append(s3DFDec).append(cIp)
+    .append(extra).append(ts);‬
+return sb.toString();‬
+```
 
 ###requestMerchInfo Dönüş Kodları: <br>
 
@@ -334,31 +336,34 @@ Kullanılacak Sanal POS’a göre posMessage içerisinde iletilen bilgiler deği
 dönen cevap içerisinde, Kredi Kartı ile ilgili bilgiler (PAN, CVC/CVV2, Son Kullanma Tarihi, Kart
 Sahibi İsmi) çıkartılacak ve bunun dışında kalan bilgiler JSON formatında iletilecektir. Sanal
 POS’tan dönen cevap için iletilecek posMessage örneği aşağıda yer almaktadır.
+```xml
+<PosResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Host>
+    <AuthCode>123456</AuthCode>
+    <RRN>126ABA7DFB72</RRN>
+    <Date>1234</Date>
+    <Time>010106</Time>
+    <RC>00</RC>
+  </Host>
+  <Result>
+    <Code>0</Code>
+    <Text />
+    <ErrorMessage />
+  </Result>
+  <TrnxID>830601d3-1808-4c73-8d64-39fae20644b7</TrnxID>
+  <TrnxType>Sale</TrnxType>
+  <CustomData />
+</PosResponse
 
-&lt;PosResponse xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;<br>
-xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
-&lt;Host&gt;<br>
-&lt;AuthCode&gt;123456&lt;/AuthCode&gt;<br>
-&lt;RRN&gt;126ABA7DFB72&lt;/RRN&gt;<br>
-&lt;Date&gt;1234&lt;/Date&gt;<br>
-&lt;Time&gt;010106&lt;/Time&gt;<br>
-&lt;RC&gt;00&lt;/RC&gt;<br>
-&lt;/Host&gt;<br>
-&lt;Result&gt;<br>
-&lt;Code&gt;0&lt;/Code&gt;<br>
-&lt;Text /&gt;<br>
-&lt;ErrorMessage /&gt;<br>
-&lt;/Result&gt;<br>
-&lt;TrnxID&gt;830601d3-1808-4c73-8d64-39fae20644b7&lt;/TrnxID&gt;<br>
-&lt;TrnxType&gt;Sale&lt;/TrnxType&gt;<br>
-&lt;CustomData /&gt;<br>
-&lt;/PosResponse<br>
+```
 <b>-Şekil 10 Gerçek POS mesajı-</b>
 
-
+```xml
 {"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
 106","RC":"00"},"Result":{"Code":"0","Text":"","ErrorMessage":""},"TrnxID":"830601d3-1808-4c73-
 8d64-39fae20644b7","TrnxType":"Sale","CustomData":""}}<br>
+```
 <b>-Şekil 11 POS mesajının JSON formatına çevrilmiş hali-</b>
 
 
@@ -374,24 +379,27 @@ Aşağıdaki bilgiler redirect edilecek URL’e GET parametresi olarak eklenecek
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516281/a80f9e62-889c-11e4-8119-ac4d2ac2591f.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516288/eab66e26-889c-11e4-952c-048bb8cf0874.jpg)
 
-&lt;PosResponse xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;<br>
-xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
-&lt;Host&gt;<br>
-&lt;AuthCode&gt;123456&lt;/AuthCode&gt;<br>
-&lt;RRN&gt;126ABA7DFB72&lt;/RRN&gt;<br>
-&lt;Date&gt;1234&lt;/Date&gt;<br>
-&lt;Time&gt;010106&lt;/Time&gt;<br>
-&lt;RC&gt;00&lt;/RC&gt;<br>
-&lt;/Host&gt;<br>
-&lt;Result&gt;<br>
-&lt;Code&gt;0&lt;/Code&gt;<br>
-&lt;Text /&gt;<br>
-&lt;ErrorMessage /&gt;<br>
-&lt;/Result&gt;<br>
-&lt;TrnxID&gt;830601d3-1808-4c73-8d64-39fae20644b7&lt;/TrnxID&gt;<br>
-&lt;TrnxType&gt;Sale&lt;/TrnxType&gt;<br>
-&lt;CustomData /&gt;<br>
-&lt;/PosResponse<br>
+```xml
+<PosResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Host>
+    <AuthCode>123456</AuthCode>
+    <RRN>126ABA7DFB72</RRN>
+    <Date>1234</Date>
+    <Time>010106</Time>
+    <RC>00</RC>
+  </Host>
+  <Result>
+    <Code>0</Code>
+    <Text />
+    <ErrorMessage />
+  </Result>
+  <TrnxID>830601d3-1808-4c73-8d64-39fae20644b7</TrnxID>
+  <TrnxType>Sale</TrnxType>
+  <CustomData />
+</PosResponse
+
+```
 <b>-Şekil 12 Gerçek POS mesajı-</b>
 
 {"PosResponse":{"Host":{"AuthCode":"123456","RRN":"126ABA7DFB72","Date":"1234","Time":"010
