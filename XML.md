@@ -84,30 +84,30 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 ```
 <b>-Şekil 6 Örnek İstek-<b/>
 
-###&#304;mza olu&#351;turmak i&ccedil;in alanlar&#305;n birle&#351;tirilmesi &ouml;rne&#287;i (Java Kodu)
-<p>
-  StringBuffer sb = new StringBuffer();&#8236;<br>
-  sb.append(mId).append(sUrl).append(cUrl).append(sAmount).append(cAmount);&#8236;<br>
-  for(Bank aBank : bank)<br>
-  {&#8236;<br>
-  sb.append(aBank.getId()).append(aBank.getName())<br>
-  .append(aBank.getExpBank());&#8236;<br>
-  for(Bin bin : aBank.getBin())<br>
-  {&#8236;<br>
-  sb.append(bin.getValue());&#8236;<br>
-  for(Installment inst : bin.getInst())<br>
-  {&#8236;<br>
-  sb.append(inst.getNofInst()).append(inst.getAmountInst())<br>
-  .append(inst.getcAmount())&#8236;<br>
-  .append(inst.gettAmount())<br>
-  .append(inst.iscPaid1stInst())<br>
-  .append(inst.getExpInst());&#8236;<br>
-  }&#8236;<br>
-  }&#8236;<br>
-  }&#8236;<br>
-  sb.append(ts);&#8236;<br>
-  return sb.toString();<br>
-</p>
+```xml
+İmza oluşturmak için alanların birleştirilmesi örneği (Java Kodu)
+StringBuffer sb = new StringBuffer();‬
+sb.append(mId).append(sUrl).append(cUrl).append(sAmount).append(cAmount);‬
+for(Bank aBank : bank)
+{‬
+    sb.append(aBank.getId()).append(aBank.getName())
+                            .append(aBank.getExpBank());‬
+for(Bin bin : aBank.getBin())
+{‬
+    sb.append(bin.getValue());‬
+for(Installment inst : bin.getInst())
+{‬
+sb.append(inst.getNofInst()).append(inst.getAmountInst())
+                            .append(inst.getcAmount())‬
+                            .append(inst.gettAmount())
+                            .append(inst.iscPaid1stInst())
+                            .append(inst.getExpInst());‬
+}‬
+}‬
+}‬
+sb.append(ts);‬
+return sb.toString();
+```
 
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516081/e16dca22-8891-11e4-9025-c8351cf28faa.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516103/eac877c4-8892-11e4-9332-31b54ec00dbd.jpg)
