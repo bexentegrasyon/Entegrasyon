@@ -113,23 +113,25 @@ return sb.toString();
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516081/e16dca22-8891-11e4-9025-c8351cf28faa.jpg)
 ![GitHub Logo](https://cloud.githubusercontent.com/assets/10204757/5516103/eac877c4-8892-11e4-9332-31b54ec00dbd.jpg)
 
-&lt;S:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;<br>
-&lt;S:Body&gt;<br>
-&lt;ns2:initializePaymentResponse xmlns:ws=&quot;http://merchant.ws.expressbkm.com.tr/&quot;&gt;<br>
-&lt;InitializePaymentWSResponse&gt;<br>
-&lt;t&gt;186005784745383&lt;/t&gt;<br>
-&lt;url&gt;http://bkmexpress/islemBasarili.bkm&lt;/url&gt;<br>
-&lt;ts&gt;20110729-15:05:23&lt;/ts&gt;<br>
-&lt;s&gt;PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=&lt;/s&gt;<br>
-&lt;res&gt;<br>
-&lt;resCode&gt;0&lt;/resCode&gt;<br>
-&lt;resMsg&gt;Success&lt;/resMsg&gt;<br>
-&lt;resDet/&gt;<br>
-&lt;/res&gt;<br>
-&lt;/InitializePaymentWSResponse&gt;<br>
-&lt;/ns2:initializePaymentResponse&gt;<br>
-&lt;/S:Body&gt;<br>
-&lt;/S:Envelope&gt;<br>
+```xml
+<S:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <S:Body>
+   <ns2:initializePaymentResponse xmlns:ws="http://merchant.ws.expressbkm.com.tr/">
+     <InitializePaymentWSResponse>
+        <t>186005784745383</t>
+        <url>http://bkmexpress/islemBasarili.bkm</url>
+        <ts>20110729-15:05:23</ts>
+        <s>PHijxQjUrcXBYoCei4QxjWo9Kg8D3p9tlWoT4t0/gyTE96639In0FZFY2/rvP+/bMsd1EArmKZsR5VW3rwoPxw=</s>
+        <res>
+          <resCode>0</resCode>
+          <resMsg>Success</resMsg>
+          <resDet/>
+          </res>
+      </InitializePaymentWSResponse>
+    </ns2:initializePaymentResponse>
+  </S:Body>
+</S:Envelope>
+```
 <b>-Şekil 7 Örnek Dönüş-</b>
 
 Bu adım sonrasında kullanıcı Express sistemine yönlendirilir (redirect yapılmalıdır, <b>iFrame desteklenmemektedir</b>)
