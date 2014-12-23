@@ -84,8 +84,9 @@ Tüm tutarlar, Türk Lirası (TRY) cinsinden ve virgülden sonra 2 basamak kuru�
 ```
 <b>-Şekil 6 Örnek İstek-<b/>
 
-```xml
+
 İmza oluşturmak için alanların birleştirilmesi örneği (Java Kodu)
+```java
 StringBuffer sb = new StringBuffer();‬
 sb.append(mId).append(sUrl).append(cUrl).append(sAmount).append(cAmount);‬
 for(Bank aBank : bank)
