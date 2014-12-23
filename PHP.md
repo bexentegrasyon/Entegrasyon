@@ -48,7 +48,7 @@ verilmektedir. (redirect yapılmalıdır, <b>iFrame desteklenmemektedir</b>)
 ###Mobil İşyeri Uygulamasından Yönlendirme
 
 Mobil uygulamalar tarayıcıları POST metoduyla açamamaktadır. Bu sebeple yukarıda anlatılan
-yönlendirme gerçekleştirilememektedir. Bunun yerine üye işyerinin mobil uygulaması, işyeri
+yönlendirme gerçekleştirilememektedir. Bunun yerine üye işyerinin mobil uygulaması,işyeri
 sunucusundan aldığı token değerini BKM Mobil uygulamasının önceden kendilerine iletilmiş
 olan URL’i ile birleştirerek açmalıdır.
 
