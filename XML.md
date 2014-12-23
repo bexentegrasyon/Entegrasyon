@@ -528,7 +528,7 @@ Bu web servisi, işyerlerine gönderilen “requestMerchInfoService.wsdl” ile 
 olarak yazmanız gerekiyor. Aksi takdirde BKM, sizin web servisinize geldiğinde büyük
 ihtimalle namespace e dayalı bir hata oluşacaktır.
 
-Bu servisleri wsdl e uygun halde hazırlamak için, Java ve .NET ortamlarında web servis
+Bu servisleri wsdl e uygun halde hazırlamak için,Java ve .NET ortamlarında web servis
 kabukları üreten araçlar mevcut, aynı zamanda BKM’nin sunduğu PHP paketinde de örnek bir
 web servis bulunuyor.
 
